@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #ffffff;
+      --dark: #000000;
+      --black: #575757;
+      --very-light-pink: #c7c7c7;
+      --text-input-field: #f7f7f7;
+      --hospital-green: #acd9b2;
+      --hospital-greenB: #76d191;
+      --background-colorMain: #6e9aa4;
+      --sm: 1.4rem;
+      --md: 1.6rem;
+      --lg: 1.8rem;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--background-colorMain);
+    }
+
+    /* Todo el documento que ocupa el 100% */
+    .login {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Contenedor del formulario (padre) */
+    .form-container {
+      width: 31rem;
+      background-color: var(--background-colorMain);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      box-shadow: 1px 1px 10px 1px;
+      padding: .8rem 1rem;
+    }
+
+    /* Logo principal con media max-w640px->display:block (hijo)*/
+    .logo {
+      width: 15rem;
+      margin-top: .6rem;
+      margin-bottom: 3.4rem;
+      justify-self: center;
+      display: none;
+    }
+
+    /* Titulo principal debajo del logo (hijo)*/
+    .title {
+      font-size: var(--lg);
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+
+    /* Subtitulo debajo del titulo (hijo)*/
+    .subtitle {
+      color: var(--black);
+      font-size: var(--md);
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 3rem;
+    }
+
+    .new:hover {
+      color: var(--hospital-greenB);
+    }
+
+    /* Formulario hijo y ~padre~ de label, input y button */
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Titulo password dentro de form */
+    .label {
+      font-size: var(--sm);
+      font-weight: bold;
+      margin-bottom: .4rem;
+    }
+
+    /* password * debajo de label */
+    .input {
+      background-color: var(--text-input-field);
+      border: none;
+      border-radius: 1.3rem;
+      height: 3rem;
+      font-size: var(--md);
+      padding: .6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Input->submit con dos clases*/
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 1.4rem;
+      border: none;
+      color: var(--white);
+      /* width: 100%; */
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 5rem;
+    }
+
+    .primary-button:hover {
+      background-color: #76d191;
+      text-decoration: underline;
+      color: var(--black);
+    }
+
+    .login-button {
+      margin-top: 1.4rem;
+      margin-bottom: 3rem;
+    }
+
+    @media(max-width: 640px) {
+      .logo {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <div class="form-container">
+      <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+      <h1 class="title">Create a <span class="new">new</span> password</h1>
+      <p class="subtitle">Enter a new password for your account</p>
+
+      <form action="/" class="form">
+        <label for="password" class="label">Password</label>
+        <input type="password" id="password" placeholder="*********" class="input input-password">
+
+        <label for="new-password" class="label">Confirm password</label>
+        <input type="password" id="new-password" placeholder="*********" class="input input-password">
+
+        <input type="submit" value="Confirm" class="primary-button login-button">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
