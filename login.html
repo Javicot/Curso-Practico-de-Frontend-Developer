@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p_r02</title>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #ffffff;
+      --dark: #000000;
+      --black: #575757;
+      --very-light-pink: #c7c7c7;
+      --text-input-field: #f7f7f7;
+      --hospital-green: #acd9b2;
+      --hospital-greenB: #76d191;
+      --background-colorMain: #6e9aa4;
+      --sm: 1.4rem;
+      --md: 1.6rem;
+      --lg: 1.8rem;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--background-colorMain);
+    }
+
+    /* Todo el documento que ocupa el 100% */
+    .login {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Contenedor del formulario (padre) */
+    .form-container {
+      width: 31rem;
+      background-color: var(--background-colorMain);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      box-shadow: 1px 1px 10px 1px;
+      padding: .8rem 1rem;
+      border: .2rem solid rgb(60, 91, 98);
+    }
+
+    /* Logo principal con media max-w640px->display:block (hijo)*/
+    .logo {
+      width: 15rem;
+      margin-top: .6rem;
+      margin-bottom: 3.4rem;
+      justify-self: center;
+      display: none;
+    }
+
+    /* Formulario hijo y ~padre~ de label, input y button */
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form a {
+      color: var(--hospital-green);
+      font-size: var(--sm);
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 4rem;
+    }
+
+    /* Titulo password dentro de form */
+    .label {
+      font-size: var(--sm);
+      font-weight: bold;
+      margin-bottom: .8rem;
+    }
+
+    /* password * debajo de label */
+    .input {
+      background-color: var(--text-input-field);
+      border: none;
+      border-radius: 1.3rem;
+      height: 3rem;
+      font-size: var(--md);
+      padding: 0 .6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .input-email {
+      margin-bottom: 2.2rem;
+
+    }
+
+    .input-password {
+      margin-bottom: 2.2rem;
+    }
+
+    /* Input->submit con dos clases*/
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 1.4rem;
+      border: none;
+      color: var(--white);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 5rem;
+    }
+
+    .primary-button:hover {
+      background-color: #76d191;
+      text-decoration: underline;
+      color: var(--black);
+    }
+
+    .secondary-button {
+      background-color: var(--white);
+      border-radius: 1.4rem;
+      border: 1px solid var(--hospital-green);
+      color: var(--hospital-greenB);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 5rem;
+    }
+
+
+    .login-button {
+      margin-top: 1.4rem;
+      margin-bottom: 3rem;
+    }
+
+    @media(max-width: 640px) {
+      .logo {
+        display: block;
+      }
+    }
+
+    @media (max-width:640px) {
+      .form-container {
+        height: 60rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Ocupa todo el html -->
+  <div class="login">
+
+    <!-- Formulario padre -->
+    <div class="form-container">
+      <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+      <!-- Formulario hijo  -->
+      <form action="/" class="form">
+        <label for="email" class="label">Email addres</label>
+        <input type="text" id="password" placeholder="yourEmail@example.com" class="input input-email">
+
+        <label for="password" class="label">Password</label>
+        <input type="password" id="password" placeholder="*********" class="input input-password">
+        <!-- Input confirm -->
+        <input type="submit" value="Log in" class="primary-button login-button">
+        <!-- Enlace de olvidaste tu contrasenia -->
+        <a href="#">Forgot my password</a>
+      </form>
+      <button class="secondary-button signup-button">Sign Up</button>
+    </div>
+  </div>
+</body>
+
+
+</html>
