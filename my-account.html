@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #ffffff;
+      --dark: #000000;
+      --black: #575757;
+      --very-light-pink: #c7c7c7;
+      --text-input-field: #f7f7f7;
+      --hospital-green: #acd9b2;
+      --hospital-greenB: #76d191;
+      --background-colorMain: #6e9aa4;
+      --sm: 1.4rem;
+      --md: 1.6rem;
+      --lg: 1.8rem;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--background-colorMain);
+    }
+
+    /* Todo el documento que ocupa el 100% */
+    .login {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Contenedor del formulario (padre) */
+    .form-container {
+      width: 31rem;
+      background-color: var(--background-colorMain);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      box-shadow: 1px 1px 10px 1px;
+      padding: .8rem 1rem;
+      border: .2rem solid rgb(60, 91, 98);
+    }
+
+    /* Titulo principal (hijo)*/
+    .title {
+      font-size: var(--lg);
+      margin-bottom: 3.4rem;
+      text-align: initial;
+      text-decoration: underline;
+    }
+
+    /* Formulario hijo y ~padre~ de label, input y button */
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Contenedor hijo y padre de label e input */
+    .form div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Clase de los labels name, email y password*/
+    .label {
+      font-size: var(--sm);
+      font-weight: bold;
+      margin-bottom: .8rem;
+
+      color: var(--hospital-greenB);
+      font-weight: bold;
+    }
+
+    .value {
+      color: var(--very-light-pink);
+      font-size: var(--md);
+      margin: .8rem 0 3.2rem 0;
+    }
+
+    /* Input->submit con dos clases*/
+    .secondary-button {
+      background-color: var(--white);
+      border-radius: 1.4rem;
+      border: 1px solid var(--hospital-greenB);
+      color: var(--hospital-greenB);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 5rem;
+    }
+
+    .secondary-button:hover {
+      background-color: var(--hospital-greenB);
+      text-decoration: underline;
+      color: var(--black);
+    }
+
+    .login-button {
+      margin-top: 1.4rem;
+      margin-bottom: 3rem;
+    }
+
+    @media(max-width: 640px) {
+      .form-container {
+        height: 75%;
+      }
+
+      .form {
+        height: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Ocupa todo el html -->
+  <div class="login">
+
+    <!-- Formulario contenedor-padre -->
+    <div class="form-container">
+      <!-- Titulo -->
+      <h1 class="title">My account</h1>
+      <!-- Formulario hijo  -->
+      <form action="/" class="form">
+        <!-- Contenedor para separar input y label de inputSubmit -->
+        <div>
+          <!-- label e input  -->
+          <label for="name" class="label">Name</label>
+          <p class="value">Jhon Doe</p>
+
+          <label for="name" class="label">Email address</label>
+          <p class="value">JhonDoe@hotmail.com</p>
+
+          <label for="new-password" class="label">Password</label>
+          <p class="value">*********</p>
+        </div>
+        <!-- Input confirm -->
+        <input type="submit" value="Create" class="secondary-button login-button">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
