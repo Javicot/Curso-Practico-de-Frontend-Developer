@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #ffffff;
+      --dark: #000000;
+      --black: #575757;
+      --very-light-pink: #c7c7c7;
+      --text-input-field: #f7f7f7;
+      --hospital-green: #acd9b2;
+      --hospital-greenB: #76d191;
+      --background-colorMain: #6e9aa4;
+      --sm: 1.4rem;
+      --md: 1.6rem;
+      --lg: 1.8rem;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--background-colorMain);
+    }
+
+    /* Card padre */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 240px);
+      gap: 1.5rem;
+      place-content: center;
+    }
+
+    /* Cards hijos */
+    .product-card {
+      width: 100%;
+    }
+
+    /* Imagen de la card */
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 2rem;
+      object-fit: cover;
+    }
+
+    /* contenedor hijo ~padre~ de parrafos e img de carrito  */
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+
+      border: 3px solid rgb(0, 38, 255);
+    }
+
+    /* Parrafo 1 */
+    .product-info div p:nth-child(1) {
+      font-weight: bold;
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: .4rem;
+    }
+
+    /* Parrafo 2 */
+    .product-info div p:nth-child(2) {
+      font-size: var(--sm);
+      margin-top: 0;
+      margin-bottom: 0;
+      color: var(--very-light-pink);
+    }
+
+    /* Contenedor de la imagen */
+    .product-info figure {
+      margin: 0 1rem 0 0;
+    }
+
+    .product-info figure img {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .product-info figure img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    @media(max-width: 640px) {
+      .cards-container {
+        grid-template-columns: repeat(auto-fill, 160px);
+      }
+
+      .product-card {
+        width: 100%;
+      }
+
+      .product-card img {
+        width: 14rem;
+        height: 14rem;
+        border-radius: 2rem;
+        object-fit: cover;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="main-container"></section>
+  <div class="cards-container">
+
+    <!-- cards hijos ↓ -->
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+      <div class="product-info">
+        <div>
+          <p>$120.00</p>
+          <p>Bike</p>
+        </div>
+        <figure>
+          <img src="./icons/bt_add_to_cart.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+
+  </div>
+  <!--Terminan los cards hijos ↑-->
+</body>
+
+</html>
