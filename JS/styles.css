@@ -1,0 +1,177 @@
+:root {
+  --white: #ffffff;
+  --dark: #000000;
+  --black: #575757;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+  --hospital-greenB: #76d191;
+  --background-colorMain: #6e9aa4;
+  --sm: 1.4rem;
+  --md: 1.6rem;
+  --lg: 1.8rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--background-colorMain);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  border-bottom: 1px solid var(--black);
+}
+
+/**=============================NAVBAR */
+.menu {
+  display: none;
+}
+
+.logo {
+  width: 10rem;
+}
+
+.nbLeft ul,
+.nbRight ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 6rem;
+}
+
+.nbLeft {
+  display: flex;
+}
+
+.nbLeft ul {
+  margin-left: 1.2rem;
+}
+
+.nbLeft ul li a,
+.nbRight ul li a {
+  text-decoration: none;
+  color: var(--very-light-pink);
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  font-size: 12px;
+}
+
+.nbLeft ul li a:hover,
+.nbRight ul li a:hover {
+  border: 1px solid var var(--hospital-green);
+  color: var(--hospital-green);
+  border: 1px solid var(--white);
+}
+
+.nbRight__email {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nbShoppingCart {
+  position: relative;
+}
+
+.nbShoppingCart div {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--hospital-greenB);
+  border-radius: 50%;
+  font-size: var(--sm);
+  font-weight: bold;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**=====================DROP-DOWN-MENU-SIGN-UP  */
+/* Contenedor padre */
+.desktopMenu {
+  position: absolute;
+  top: 60px;
+  right: 65px;
+  display: none;
+
+  width: 15rem;
+  height: auto;
+  border: 1px solid var(--very-light-pink);
+  border-radius: 0.9rem;
+  /* padding: 0 20px 0 0; */
+  background-color: var(--text-input-field);
+}
+
+/* Lista hija y padre que contiene 3 listas*/
+.desktopMenu ul {
+  list-style: none;
+  padding: 0 10px;
+  /* margin: 0; */
+  font-size: var(--sm);
+}
+
+.desktopMenu ul li:nth-child(1),
+.desktopMenu ul li:nth-child(2) {
+  font-weight: bold;
+}
+
+.desktopMenu ul li:last-child {
+  padding-top: 2rem;
+  border-top: 1px solid var(--very-light-pink);
+}
+.desktopMenu ul li:last-child a:hover {
+  border-bottom: 1px solid var(--hospital-greenB);
+}
+
+.desktopMenu ul li:last-child a {
+  color: var(--hospital-green);
+  font-size: var(--sm);
+}
+
+/* Todos los enlaces dentro de las listas */
+.desktopMenu ul li a {
+  color: var(--black);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+/*!CLase de apoyo para aparecer y desaparecer el menu */
+.active {
+  display: block;
+}
+
+/* Media querie del NavBar */
+@media (max-width: 640px) {
+  .menu {
+    display: block;
+  }
+
+  .nbLeft ul {
+    display: none;
+  }
+
+  .nbRight__email {
+    display: none;
+  }
+}
