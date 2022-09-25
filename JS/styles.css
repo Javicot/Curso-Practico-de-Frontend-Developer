@@ -1,3 +1,4 @@
+/**===========================VARIABLES GLOBALES*/
 :root {
   --white: #ffffff;
   --dark: #000000;
@@ -37,9 +38,10 @@ nav {
   border-bottom: 1px solid var(--black);
 }
 
-/**=============================NAVBAR */
+/**=====================================NAVBAR */
 .menu {
   display: none;
+  cursor: pointer;
 }
 
 .logo {
@@ -107,13 +109,13 @@ nav {
   align-items: center;
 }
 
-/**=====================DROP-DOWN-MENU-SIGN-UP  */
+/**=====================DROP-DOWN-MENU-SIGN-UP (COMPONENTE 2)*/
 /* Contenedor padre */
 .desktopMenu {
   position: absolute;
   top: 60px;
   right: 65px;
-  display: none;
+  display: block;
 
   width: 15rem;
   height: auto;
@@ -156,11 +158,65 @@ nav {
   margin-bottom: 2rem;
   display: inline-block;
 }
-/*!CLase de apoyo para aparecer y desaparecer el menu */
-.active {
-  display: block;
+
+/**======================DROPDOWN MENU MOBILE (COMPONENTE 3) */
+.mobileMenu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* display: block; */
+  height: 80vh;
+  width: 100%;
 }
 
+.mobileMenu a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+  margin-bottom: 2.4rem;
+  font-size: var(--md);
+}
+
+.mobileMenu ul {
+  margin: 2.4rem 0 0 0.5rem;
+  list-style: none;
+}
+
+.mobileMenu ul li {
+  margin-bottom: 2.4rem;
+}
+
+.mobileMenu ul:nth-child(1) {
+  border-bottom: 1px solid var(--very-light-pink);
+}
+
+.mobileMenu .email {
+  font-size: var(--sm);
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.mobileMenu .signOut {
+  color: var(--hospital-greenB);
+  font-size: var(--sm);
+}
+
+.mobileMenu ul:nth-child(3) li:nth-child(1) {
+  margin-bottom: 0.8rem;
+}
+
+/*!CLase de apoyo para aparecer y desaparecer el menu */
+.active {
+  display: none;
+}
+/* .inactive {
+  display: none;
+} */
 /* Media querie del NavBar */
 @media (max-width: 640px) {
   .menu {
@@ -172,6 +228,15 @@ nav {
   }
 
   .nbRight__email {
+    display: none;
+  }
+  .desktopMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobileMenu {
     display: none;
   }
 }
