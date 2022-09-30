@@ -43,7 +43,7 @@
       background-color: var(--background-colorMain);
     }
 
-    .productDetail {
+    .productDetail-secondary {
       width: 36rem;
       padding-bottom: 2.4rem;
       position: absolute;
@@ -51,7 +51,7 @@
       margin: 1rem;
     }
 
-    .productDetail__close {
+    .productDetail__close-secondary {
       background: var(--white);
       width: 1.4rem;
       height: 1.4rem;
@@ -66,43 +66,43 @@
       align-items: center;
     }
 
-    .productDetail__close:hover {
+    .productDetail__close-secondary:hover {
       cursor: pointer;
     }
 
-    .productDetail>img:nth-child(2) {
+    .productDetail-secondary>img:nth-child(2) {
       width: 100%;
       height: 36rem;
       object-fit: cover;
       border-radius: 0 0 2rem 2rem;
     }
 
-    .productInfo {
+    .productInfo-secondary {
       margin: 2.4rem 2.4rem 0 2.4rem;
     }
 
-    .productInfo p:nth-child(1) {
+    .productInfo-secondary p:nth-child(1) {
       font-weight: bold;
       font-size: var(--md);
       margin-top: 0;
       margin-bottom: .4rem;
     }
 
-    .productInfo p:nth-child(2) {
+    .productInfo-secondary p:nth-child(2) {
       color: var(--very-light-pink);
       font-size: var(--md);
       margin-top: 0;
       margin-bottom: 3.6rem;
     }
 
-    .productInfo p:nth-child(3) {
+    .productInfo-secondary p:nth-child(3) {
       color: var(--very-light-pink);
       font-size: var(--sm);
       margin-top: 0;
       margin-bottom: 36px;
     }
 
-    .primary-button {
+    .primary-button-secondary {
       background-color: var(--hospital-green);
       border-radius: 1.4rem;
       border: none;
@@ -114,13 +114,14 @@
       height: 5rem;
     }
 
-    .addToCartBtn {
+    .addToCartBtn-secondary {
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .dots {
+      margin-top: .5rem;
       text-align: center;
     }
 
@@ -149,8 +150,8 @@
 </head>
 
 <body>
-  <aside class="productDetail">
-    <div class="productDetail__close">
+  <aside class="productDetail-secondary">
+    <div class="productDetail__close-secondary">
       <img src="./icons/icon_close.png" alt="close">
     </div>
     <img
@@ -161,13 +162,13 @@
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
-    <div class="productInfo">
+    <div class="productInfo-secondary">
       <p>$35.00</p>
       <p>Bike</p>
       <p>This is a practical bike design for a wild life xd Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Ipsa corrupti porro nostrum fugiat quam laborum vero iure pariatur dignissimos ipsum. Magnam laborum soluta quam
         dolorum, ipsam omnis tempora fugiat animi.</p>
-      <button class="primary-button addToCartBtn">
+      <button class="primary-button-secondary addToCartBtn-secondary">
         <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
         Add to cart
       </button>
