@@ -115,6 +115,7 @@ function renderProducts(arr) {
 
     const productImg = document.createElement("img");
     productImg.setAttribute("src", product.image);
+    productImg.classList.add("imgJS");
 
     const productInfo = document.createElement("div");
     productInfo.classList.add("product-info");
@@ -148,3 +149,16 @@ function renderProducts(arr) {
 renderProducts(productList);
 
 //*==============================COMPONENTE 06
+const productDetailS = document.querySelector(".productDetail-secondary");
+const productImg1 = document.querySelector(".imgJS");
+
+productImg1.addEventListener("click", () => {
+  productDetailS.classList.remove("active");
+});
+
+const productDetailClose = document.querySelector(
+  ".productDetail__close-secondary"
+);
+productDetailClose.addEventListener("click", () => {
+  productDetailS.classList.add("active");
+});

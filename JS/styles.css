@@ -173,6 +173,7 @@ nav {
   /* display: block; */
   height: 80vh;
   width: 100%;
+  background-color: var(--white);
 }
 
 .mobileMenu a {
@@ -218,6 +219,7 @@ nav {
   box-sizing: border-box;
   position: absolute;
   right: 0;
+  background-color: var(--white);
 }
 
 .title-container {
