@@ -358,6 +358,103 @@ nav {
   height: 3.5rem;
 }
 
+/**===================PRODUCTS-DETAILS (COMPONENTE 6)*/
+.productDetail-secondary {
+  width: 36rem;
+  padding-bottom: 2.4rem;
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+}
+
+.productDetail__close-secondary {
+  background: var(--white);
+  width: 1.4rem;
+  height: 1.4rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 2.4rem;
+  z-index: 2;
+  padding: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productDetail__close-secondary:hover {
+  cursor: pointer;
+}
+
+.productDetail-secondary > img:nth-child(2) {
+  width: 100%;
+  height: 36rem;
+  object-fit: cover;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.productInfo-secondary {
+  margin: 2.4rem 2.4rem 0 2.4rem;
+}
+
+.productInfo-secondary p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.productInfo-secondary p:nth-child(2) {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 3.6rem;
+}
+
+.productInfo-secondary p:nth-child(3) {
+  color: var(--very-light-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.primary-button-secondary {
+  background-color: var(--hospital-green);
+  border-radius: 1.4rem;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 5rem;
+}
+
+.addToCartBtn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dots {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: var(--very-light-pink);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dots span:nth-child(1) {
+  background-color: var(--hospital-green);
+}
+
 /*!CLase de apoyo para aparecer y desaparecer el menu */
 .active {
   display: none;
@@ -397,6 +494,12 @@ nav {
     height: 14rem;
     border-radius: 2rem;
     object-fit: cover;
+  }
+
+  .productDetail-secondary {
+    width: 100%;
+    padding: 1rem;
+    right: -1rem;
   }
 }
 

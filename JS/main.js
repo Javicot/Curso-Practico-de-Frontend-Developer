@@ -146,3 +146,5 @@ function renderProducts(arr) {
   }
 }
 renderProducts(productList);
+
+//*==============================COMPONENTE 06
