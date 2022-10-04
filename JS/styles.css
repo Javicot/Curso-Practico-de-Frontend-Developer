@@ -459,7 +459,7 @@ nav {
 }
 
 /*!CLase de apoyo para aparecer y desaparecer el menu */
-.active {
+.inactive {
   display: none;
 }
 /* .inactive {
