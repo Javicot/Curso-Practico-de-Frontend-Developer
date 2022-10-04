@@ -107,58 +107,64 @@ productList.push({
     "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 });
 
-function renderProducts(arr) {
-  for (product of arr) {
-    const productCard = document.createElement("div");
-    productCard.classList.add("product-card");
-    //Creando hijos ↓
+// function renderProducts(arr) {
+for (product of productList) {
+  const productCard = document.createElement("div");
+  productCard.classList.add("product-card");
+  //Creando hijos ↓
 
-    const productImg = document.createElement("img");
-    productImg.setAttribute("src", product.image);
-    productImg.classList.add("imgJS");
+  const productImg = document.createElement("img");
+  productImg.classList.add("imgJS");
+  productImg.setAttribute("src", product.image);
 
-    const productInfo = document.createElement("div");
-    productInfo.classList.add("product-info");
-    //Creando hijos ↓
+  const productInfo = document.createElement("div");
+  productInfo.classList.add("product-info");
+  //Creando hijos ↓
 
-    const productInfoDiv = document.createElement("div");
-    const productPrice = document.createElement("p");
-    productPrice.innerText = "$" + product.price;
-    const productName = document.createElement("p");
-    productName.innerText = product.name;
-    //Creando hijos ↓
+  const productInfoDiv = document.createElement("div");
+  const productPrice = document.createElement("p");
+  productPrice.innerText = "$" + product.price;
+  const productName = document.createElement("p");
+  productName.innerText = product.name;
+  //Creando hijos ↓
 
-    const productInfoFigure = document.createElement("figure");
-    const productFigureImg = document.createElement("img");
-    productFigureImg.setAttribute("src", "../icons/bt_add_to_cart.svg");
-    //Creando hijos ↓
-    productInfoFigure.appendChild(productFigureImg);
+  const productInfoFigure = document.createElement("figure");
+  const productFigureImg = document.createElement("img");
+  productFigureImg.setAttribute("src", "../icons/bt_add_to_cart.svg");
+  //Creando hijos ↓
+  productInfoFigure.appendChild(productFigureImg);
 
-    productCard.appendChild(productImg);
-    productCard.appendChild(productInfo);
+  productCard.appendChild(productImg);
+  productCard.appendChild(productInfo);
 
-    productInfo.appendChild(productInfoDiv);
-    productInfo.appendChild(productInfoFigure);
+  productInfo.appendChild(productInfoDiv);
+  productInfo.appendChild(productInfoFigure);
 
-    productInfoDiv.appendChild(productPrice);
-    productInfoDiv.appendChild(productName);
+  productInfoDiv.appendChild(productPrice);
+  productInfoDiv.appendChild(productName);
 
-    cardsContainer.appendChild(productCard);
-  }
+  cardsContainer.appendChild(productCard);
 }
-renderProducts(productList);
+// }
+// renderProducts(productList);
 
 //*==============================COMPONENTE 06
 const productDetailS = document.querySelector(".productDetail-secondary");
-const productImg1 = document.querySelector(".imgJS");
+const productImgg = document.querySelector(".imgJS");
+// const cardsTouch = document.querySelector(".cards-container");
 
-productImg1.addEventListener("click", () => {
+cardsContainer.addEventListener("click", () => {
   productDetailS.classList.remove("active");
 });
+// productImgg.addEventListener("click", cambio);
+// function cambio() {
+//   productDetailS.classList.add("active");
+// }
+// cambio();
 
 const productDetailClose = document.querySelector(
   ".productDetail__close-secondary"
 );
-productDetailClose.addEventListener("click", () => {
+productDetailClose.addEventListener("click", (a) => {
   productDetailS.classList.add("active");
 });
